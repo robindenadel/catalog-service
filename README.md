@@ -1,3 +1,0 @@
-# service-catalog
-
-service-catalog
