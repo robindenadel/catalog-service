@@ -28,11 +28,8 @@ jobs:
           path: "${{ github.workspace }}"
           fail-build: false
           severity-cutoff: high
-      - name: Upload vulnerability report
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: results.sarif
-          # Optional category for the results
-          # Used to differentiate multiple results for one commit
-          category: my-analysis-tool
+#      - name: Upload vulnerability report
+#        uses: github/codeql-action/upload-sarif@v3
+#        if: success() || failure()
+#        with:
+#          sarif_file: ${{ steps.scan.outputs.sarif }}
